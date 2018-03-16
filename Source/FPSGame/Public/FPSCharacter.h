@@ -54,7 +54,7 @@ public:
 	UAnimSequence* FireAnimation;
 
 	/** Is carrying the objective */
-	UPROPERTY(BlueprintReadOnly, Category = "Gameplay")
+	UPROPERTY(Replicated, BlueprintReadOnly, Category = "Gameplay")
 	bool bIsCarryingObjective = false;
 
 
@@ -63,6 +63,10 @@ protected:
 	
 	/** Fires a projectile. */
 	void Fire();
+
+	/** Fires a projectile in the server. */
+	UFUNCTION(Server, Reliable, WithValidation)
+	void ServerFire();
 
 	/** Handles moving forward/backward */
 	void MoveForward(float Val);
@@ -78,6 +82,9 @@ public:
 
 	/** Returns FirstPersonCameraComponent subobject **/
 	UCameraComponent* GetFirstPersonCameraComponent() const { return CameraComponent; }
+
+	// Called every frame
+	virtual void Tick(float DeltaTime) override;
 
 };
 
