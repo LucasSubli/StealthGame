@@ -4,7 +4,7 @@ A FPS project to learn UE4 that will contain a few guards that can be distracted
 
 ## Video
 
-[![Gameplay](http://img.youtube.com/vi/_3pNpaC0nVE/0.jpg)](http://www.youtube.com/watch?v=_3pNpaC0nVE)
+[Gameplay Youtube video](https://www.youtube.com/watch?v=_3pNpaC0nVE)
 
 
 ### Prerequisities
